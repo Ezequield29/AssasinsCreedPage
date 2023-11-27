@@ -1,0 +1,285 @@
+/*Paramteros Globales*/
+/*desktop*/
+@font-face { 
+    font-family: 'Assassin'; 
+    src: url("../Fonts/Assassin$.ttf"); 
+} 
+*{
+    margin: 0%;
+    padding: 0%;
+    font-size: 62.5%;
+    
+}
+/*HTML*/
+/* Header */
+header{
+    position: sticky;
+    top: 0%;
+}
+header .header{
+    width: 100%;
+    height: 60px;
+}
+.containerLogo .imgLogo{
+    width: 50px;
+    background-color: black;
+}
+.imgLogo{
+    width: 50px;
+    background-color: black;
+}
+.containerLogo span{
+    font-size: 1.6rem;
+    font-weight: 600;
+    
+}
+h1{
+    font-family: 'Assassin', serif ;
+    font-size: 6rem;
+    text-align: center;
+    background-color: black;
+    color: blanchedalmond;
+    margin-bottom: -1%;
+}
+#check_menu, .navDivHeader label {
+    display: none;
+}
+.navDivHeader{
+    height: 100%;
+}
+.ulNavDivHeader{
+    padding: 10px;
+    text-align:center;
+    font-size: 2rem;
+    justify-content: right;
+    display: flex;
+    list-style: none;
+    background-color: black;
+/*     display: block; */
+}
+/*pseudoclases*/
+.liUlNavHeader :hover{
+background-color:#D4AF37;
+color: black;
+border-radius: 3px;
+}
+.liUlNavHeader :active{
+    background-color:#d4af37d2;
+    color: rgba(0, 0, 0, 0.829);
+    border-radius: 3px;
+    }
+.liUlNavHeader{
+    margin-right: 50px;
+
+}
+.aLiUlNavHeader{
+color: #D4AF37;
+text-decoration: none;
+font-family: 'Young Serif', serif;
+font-size: 2rem;
+}
+/* Main */
+main{
+    margin-top: -1%;
+}
+img {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+.descripcion {
+    padding: 30px;
+    background-color: black;
+    margin-top: -5px;
+}
+.historia{
+    padding: 30px;
+    background-color: black;
+    margin-top: -5px;
+}
+h2{
+    font-size: 5rem;
+    text-align: center;
+    color: #D4AF37;
+    background-color: black;
+}
+p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.aniversario15{
+    width: 100%;
+    height: 720px;
+    justify-content: center;
+}
+.videoAniversario{
+    height: 100%;
+    width: 100%;
+
+}
+/*footer*/
+.arriba{
+    font-size: 3rem;
+    background-color: black;
+    color: #D4AF37;
+}
+.aDiv{
+    color: #D4AF37;
+    list-style: none;
+    text-decoration: none;
+}
+/*Page Historia*/
+.divHistoriaOdyssey{
+    padding: 30px;
+    background-color: black;
+    margin-top: -5px;
+}
+/*Page Peronsajes Emblematicos*/
+.divAltairPE{
+    padding: 30px;
+    background-color: black;
+    margin-top: -5px;
+}
+/*Page Jugabilidad y Mecanicas*/
+.textoJugabilidadYMcanicas{
+    padding: 30px;
+    background-color: black;
+    margin-top: -5px;
+}
+/*Page Galeria de Imagenes*/
+.galeria{
+    padding: 30px;
+    background-color: black;
+    display: flex;
+    display:block;
+    ;
+}
+.imgGaleria{
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center;
+}
+/*Page Contacto*/
+.sectionFormulario{
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.sectionFormulario h2{
+    text-align:start;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+form{
+    justify-content: center;
+    color: #D4AF37;
+    background-color: black;
+    font-size: 3rem;
+}
+/*Media quieres*/
+
+/* @media (max-width: 992px) {
+    h1{
+        font-family: 'Assassin', serif ;
+        font-size: 6rem;
+        text-align: center;
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 153, 0);
+    }
+} */
+/* @media (max-width: 820px) {
+    h1{
+        font-family: 'Assassin', serif ;
+        font-size: 6rem;
+        text-align: center;
+        background-color: rgb(199, 146, 146);
+        color: rgb(194, 163, 117);
+    }
+} */
+@media (max-width: 412px) {
+    h1{
+        display:flex ;
+        flex-direction:column;
+        padding-top: 2%;
+        font-family: 'Assassin', serif ;
+        font-size: 4rem;
+        text-align:center;
+        background-color: rgb(0, 0, 0);
+        color: blanchedalmond;
+    }
+
+    /*   #check_menu{
+        display: none; */
+    
+    #check_menu:checked~.liUlNavDivHeader{
+        display: flex;
+        background-color: #33322e79;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 60%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .navDivHeader label{
+    display: block;
+    }
+    .navDivHeader {
+        width: 100%;
+        display: flex;
+       /*  flex-direction:row; */
+       /*  justify-content: space-around; */
+    }
+/*  .navDivHeader label{
+        display: block;
+        color: #ffffff ;
+        background-color: rgb(255, 0, 0);
+    } */
+    /*   i{
+        justify-content: center;
+        padding-left: 98%;
+        height: 100%;
+        width: 100%;
+    } */
+    /*  .liUlNavHeader{
+        display: none;
+        margin: 0%;
+    } */
+    .ulNavDivHeader {
+        display: none;
+       /*  padding: 0%; */
+        font-size: 1.15rem;
+        /* width: 100%; */
+       /*  justify-content: space-around; */
+    }
+    .aniversario15{
+    height: 100%;
+    margin:0%;
+    padding: 0%;
+    }
+    .sectionFormulario{
+        background-color: black;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+/* @media (min-width: 360px) and (max-width: 700px) {
+    h1{
+        font-family: 'Assassin', serif ;
+        font-size: 6rem;
+        text-align: center;
+        background-color: rgb(126, 36, 96);
+        color: rgb(96, 204, 33);
+    }
+} */
