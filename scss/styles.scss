@@ -4,6 +4,7 @@
 @import"./partials/variables";
 @import"./partials/reset";
 @import"./partials/queries";
+@import"./partials/grids";
 /*HTML*/
 /* Header */
 header{
@@ -148,7 +149,7 @@ main{
     justify-content: center;
 }
 /*Page Contacto*/
-.sectionFormulario{
+/* .sectionFormulario{
     background-color: black;
     text-align: center;
     display: flex;
@@ -168,5 +169,53 @@ form{
     color: #D4AF37;
     background-color: black;
     font-size: 3rem;
+} */
+.sectionFormulario {
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    h2 {
+        text-align: left; 
+        font-size: 2rem; 
+    }
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    padding: 20px; 
+
+    label {
+        color: #D4AF37;
+        font-size: 1.5rem;
+        margin-bottom: 5px; 
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 10px;
+        margin-bottom: 15px; 
+        border: 1px solid #D4AF37;
+        border-radius: 5px;
+        background-color: black;
+        color: #D4AF37;
+        width: 100%;
+        font-size: 2rem; 
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    input[type="submit"] {
+        background-color: #D4AF37;
+        color: black;
+        cursor: pointer;
+    }
 }
 /*Media quieres*/
