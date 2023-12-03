@@ -13,13 +13,17 @@ header{
 }
 header .header{
     width: 100%;
-    height: 60px;
+    height: 100%;
+    .divHeader{
+        /* width: 50px; */
+    }
     .containerLogo .imgLogo{
         width: 50px;
         background-color: black;
     }
 }
 h1{
+    height: 100%;
     font-family: 'Assassin', serif ;
     font-size: 6rem;
     text-align: center;
@@ -44,9 +48,7 @@ h1{
         .liUlNavHeader {
         margin-right: 50px;
         &:hover{
-            background-color:rgb(255, 255, 255);
-            color: black;
-            border-radius: 3px;
+            background-image: linear-gradient(to right, #000000, #331d1f, #62342e, #8e5135, #b47536, #b47536, #b47536, #b47536, #8e5135, #62342e, #331d1f, #000000);
             }
         &:active{
                 background-color:#d4af37d2;
@@ -141,7 +143,6 @@ main{
     background-color: black;
     display: flex;
     display:block;
-    ;
 }
 .imgGaleria{
     margin-top: 30px;
@@ -171,6 +172,7 @@ form{
     font-size: 3rem;
 } */
 .sectionFormulario {
+    margin-top: 15px;
     background-color: black;
     text-align: center;
     display: flex;
@@ -178,7 +180,7 @@ form{
     align-items: center; 
     h2 {
         text-align: left; 
-        font-size: 2rem; 
+        font-size: 5rem; 
     }
 }
 
@@ -188,7 +190,8 @@ form{
     justify-content: center;
     background-color: black;
     padding: 20px; 
-
+    color: #D4AF37;
+    font-size: 4rem;
     label {
         color: #D4AF37;
         font-size: 1.5rem;
@@ -198,6 +201,7 @@ form{
     input,
     select,
     textarea {
+        margin-top: 10px;
         padding: 10px;
         margin-bottom: 15px; 
         border: 1px solid #D4AF37;
