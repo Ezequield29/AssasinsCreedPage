@@ -1,0 +1,218 @@
+html
+<header class="header" id="header">
+        <div class="divHeader">
+            <div class="containerLogo">
+                <a href="./index.html"> <img src="./images/logoAssasins.png" alt="Assasins Creed" class="imgLogo"></a>
+                <span>    Assasin$ Creed</span>    
+            </div>
+        </div> 
+        <div>
+            <nav class="navDivHeader">
+                <!-- Menu Mobile-->
+                <ul class="ulNavDivHeader">
+                    <li class="liUlNavHeader"><a class="aLiUlNavHeader" href="./pages/historia.html">Historia</a></li>
+                    <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="./pages/personajesEmblematicos.html">Personajes Emblematicos</a></li>
+                    <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="./pages/jugabilidadMecanicas.html">Jugabilidad y Mecanicas</a></li>
+                    <li class="liUlNavHeader"><a class="aLiUlNavHeader" href="./pages/galeriaImagenes.html">Galeria de Imagenes</a></li>
+                    <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="./pages/contacto.html">Contacto</a></li>  
+                </ul>
+            </nav>
+        </div>
+    </header> 
+css
+header {
+  position: sticky;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+header .divHeader {
+  /* width: 50px; */
+}
+header .divHeader .containerLogo {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+header .divHeader .containerLogo .imgLogo {
+  width: 100px;
+  background-color: black;
+}
+header .divHeader .containerLogo span {
+  /*     height: 100%;
+
+      font-size: 6rem;
+      text-align: center;
+      background-color: black;
+      margin-bottom: -1%; */
+  font-size: 6rem;
+  font-weight: 600;
+  color: blanchedalmond;
+  font-family: "Assassin", serif;
+  height: 100%;
+}
+
+/* #check_menu, .navDivHeader label {
+    display: none;
+} */
+.navDivHeader {
+  height: 100%;
+}
+.navDivHeader .ulNavDivHeader {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2rem;
+  justify-content: space-around;
+  display: flex;
+  list-style: none;
+  background-color: black;
+  /*     display: block; */
+}
+.navDivHeader .ulNavDivHeader .liUlNavHeader {
+  margin-right: 50px;
+}
+.navDivHeader .ulNavDivHeader .liUlNavHeader:hover {
+  background-image: linear-gradient(to right, #000000, #331d1f, #62342e, #8e5135, #b47536, #b47536, #b47536, #b47536, #8e5135, #62342e, #331d1f, #000000);
+}
+.navDivHeader .ulNavDivHeader .liUlNavHeader:active {
+  background-color: rgba(212, 175, 55, 0.8235294118);
+  color: rgba(0, 0, 0, 0.829);
+  border-radius: 3px;
+}
+.navDivHeader .ulNavDivHeader .liUlNavHeader .aLiUlNavHeader {
+  color: #D4AF37;
+  text-decoration: none;
+  font-family: "Young Serif", serif;
+  font-size: 2rem;
+}
+css Mobile@media (max-width: 768px) {
+  h1 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    font-family: "Assassin", serif;
+    font-size: 4rem;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: blanchedalmond;
+  }
+}
+@media (max-width: 767px) {
+  .navDivHeader .ulNavDivHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navDivHeader .ulNavDivHeader .liUlNavHeader {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+  .navDivHeader .ulNavDivHeader .liUlNavHeader:hover {
+    background-image: none;
+  }
+}
+@media (max-width: 412px) {
+  .contenedorDeGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "header " "main main" "main main" "main main " "footer ";
+  }
+  .header {
+    grid-area: header;
+  }
+  .main {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+sass
+header{
+    position: sticky;
+    top: 0%;
+}
+header{
+    width: 100%;
+    height: 100%;
+    .divHeader{
+        /* width: 50px; */
+        
+        .containerLogo {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            background-color: black;
+            .imgLogo{
+                width: 100px;
+                background-color: black;
+                
+            }
+            span{
+            /*     height: 100%;
+                
+                font-size: 6rem;
+                text-align: center;
+                background-color: black;
+                margin-bottom: -1%; */
+                font-size: $tamanio * 6;
+                font-weight: 600;
+                color: blanchedalmond;
+                font-family: 'Assassin', serif ;
+                height: 100%;
+            }
+        }
+    }
+    
+}
+.navDivHeader{
+    height: 100%;
+    .ulNavDivHeader{
+        margin: 0;
+        padding: 0;
+        text-align:center;
+        font-size: 2rem;
+        justify-content: space-around;
+        display: flex;
+        list-style: none;
+        background-color: black;
+    /*     display: block; */
+        .liUlNavHeader {
+        margin-right: 50px;
+        &:hover{
+            background-image: linear-gradient(to right, #000000, #331d1f, #62342e, #8e5135, #b47536, #b47536, #b47536, #b47536, #8e5135, #62342e, #331d1f, #000000);
+            }
+        &:active{
+                background-color:#d4af37d2;
+                color: rgba(0, 0, 0, 0.829);
+                border-radius: 3px;
+            }
+        .aLiUlNavHeader{
+                color: #D4AF37;
+                text-decoration: none;
+                font-family: 'Young Serif', serif;
+                font-size: 2rem;
+            }
+
+        }
+    }
+} 
+media quieres
+@media (max-width: 412px) {
+        .contenedorDeGrid {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-areas: "header " "main main" "main main" "main main " "footer ";
+        }
+        .header {
+          grid-area: header;
+        }
+        .main {
+          grid-area: main;
+        }
+        .footer {
+          grid-area: footer;
+        }
+      }

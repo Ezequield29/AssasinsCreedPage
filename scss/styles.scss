@@ -7,64 +7,93 @@
 @import"./partials/grids";
 /*HTML*/
 /* Header */
-header{
+header {
     position: sticky;
     top: 0%;
-}
-header .header{
     width: 100%;
     height: 100%;
-    .divHeader{
-        /* width: 50px; */
+    
+    .content{
+        height: 100%;
+        
     }
-    .containerLogo .imgLogo{
-        width: 50px;
-        background-color: black;
-    }
-}
-h1{
-    height: 100%;
-    font-family: 'Assassin', serif ;
-    font-size: 6rem;
-    text-align: center;
-    background-color: black;
-    color: blanchedalmond;
-    margin-bottom: -1%;
-}
-#check_menu, .navDivHeader label {
-    display: none;
-}
-.navDivHeader{
-    height: 100%;
-    .ulNavDivHeader{
-        padding: 10px;
-        text-align:center;
-        font-size: 2rem;
-        justify-content: right;
-        display: flex;
-        list-style: none;
-        background-color: black;
-    /*     display: block; */
-        .liUlNavHeader {
-        margin-right: 50px;
-        &:hover{
-            background-image: linear-gradient(to right, #000000, #331d1f, #62342e, #8e5135, #b47536, #b47536, #b47536, #b47536, #8e5135, #62342e, #331d1f, #000000);
-            }
-        &:active{
-                background-color:#d4af37d2;
-                color: rgba(0, 0, 0, 0.829);
-                border-radius: 3px;
-            }
-        .aLiUlNavHeader{
-                color: #D4AF37;
-                text-decoration: none;
-                font-family: 'Young Serif', serif;
-                font-size: 2rem;
-            }
-
+    .container-fluid{
+        margin: auto;
+        
+        .imgLogo{
+            width: 100px;
+            background-color: black;
+        }
+        span{
+            /* font-size: 6rem;
+            text-align: center;
+            background-color: black;
+            margin-bottom: -1%; */
+            font-size: 6rem;
+            font-weight: 600;
+            color: blanchedalmond;
+            font-family: "Assassin", serif;
+            height: 100%;
         }
     }
-}     
+    .menu{
+        height: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        .logoTitulo{
+            align-items: center;
+
+        }
+        .navBar{
+            height: 100%;
+            width: 100%;
+            justify-content: space-around;
+            ul{
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 2rem;
+                justify-content: space-around;
+                display: flex;
+                list-style: none;
+                background-color: black;
+    
+                li{
+                    margin-right: 50px;
+                    a{
+                        color: #D4AF37;
+                        text-decoration: none;
+                        font-family: "Young Serif", serif;
+                        font-size: 2rem;
+                    }
+    
+                }
+                li:hover{
+                    background-image: linear-gradient(to right, #000000, #331d1f, #62342e, #8e5135, #b47536, #b47536, #b47536, #b47536, #8e5135, #62342e, #331d1f, #000000);
+                }
+                li:active{
+                    background-color: rgba(212, 175, 55, 0.8235294118);
+                    color: rgba(0, 0, 0, 0.829);
+                    border-radius: 3px;
+                }
+            }
+        }
+    
+    }
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    display:none;
+}
     /* Main */
 main{
     margin-top: -1%;
@@ -150,27 +179,6 @@ main{
     justify-content: center;
 }
 /*Page Contacto*/
-/* .sectionFormulario{
-    background-color: black;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-}
-.sectionFormulario h2{
-    text-align:start;
-}
-.formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: black;
-}
-form{
-    justify-content: center;
-    color: #D4AF37;
-    background-color: black;
-    font-size: 3rem;
-} */
 .sectionFormulario {
     margin-top: 15px;
     background-color: black;

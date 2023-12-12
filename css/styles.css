@@ -9,9 +9,12 @@
   margin: 0%;
   padding: 0%;
   font-size: 62.5%;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   h1 {
     display: flex;
     flex-direction: column;
@@ -24,39 +27,47 @@
   }
 }
 /* MENU MOBILE */
-.navDivHeader ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.navDivHeader ul li {
-  margin: 0;
-  padding: 0;
-}
-.navDivHeader ul a {
-  text-decoration: none;
-  color: #fff;
-}
 @media (max-width: 768px) {
-  .navDivHeader ul {
+  .content {
+    min-height: 70px;
+  }
+  .content .menu {
+    top: 0;
+    padding: 20px;
+  }
+  .content .menu label {
+    display: initial;
+  }
+  .content .menu .navBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     display: none;
-    flex-direction: column;
-    text-align: center;
   }
-  .navDivHeader ul #check_menu {
-    display: block;
+  .content .menu .navBar li {
+    width: 100%;
   }
-  .navDivHeader ul .bx-menu {
-    display: block;
-  }
-  .navDivHeader ul li {
-    margin-bottom: 10px;
+  .content .menu #menu:checked ~ .navBar {
+    display: initial;
   }
 }
-
+/*     @media (max-width: 412px) {
+        .contenedorDeGrid {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-areas: "header " "main main" "main main" "main main " "footer ";
+        }
+        .header {
+          grid-area: header;
+        }
+        .main {
+          grid-area: main;
+        }
+        .footer {
+          grid-area: footer;
+        }
+      } */
 .contenedorDeGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -96,63 +107,85 @@
 header {
   position: sticky;
   top: 0%;
-}
-
-header .header {
   width: 100%;
   height: 100%;
 }
-header .header .divHeader {
-  /* width: 50px; */
+header .content {
+  height: 100%;
 }
-header .header .containerLogo .imgLogo {
-  width: 50px;
+header .container-fluid {
+  margin: auto;
+}
+header .container-fluid .imgLogo {
+  width: 100px;
   background-color: black;
 }
-
-h1 {
-  height: 100%;
-  font-family: "Assassin", serif;
-  font-size: 6rem;
+header .container-fluid span {
+  /* font-size: 6rem;
   text-align: center;
   background-color: black;
+  margin-bottom: -1%; */
+  font-size: 6rem;
+  font-weight: 600;
   color: blanchedalmond;
-  margin-bottom: -1%;
-}
-
-#check_menu, .navDivHeader label {
-  display: none;
-}
-
-.navDivHeader {
+  font-family: "Assassin", serif;
   height: 100%;
 }
-.navDivHeader .ulNavDivHeader {
-  padding: 10px;
+header .menu {
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+header .menu .logoTitulo {
+  align-items: center;
+}
+header .menu .navBar {
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+}
+header .menu .navBar ul {
+  margin: 0;
+  padding: 0;
   text-align: center;
   font-size: 2rem;
-  justify-content: right;
+  justify-content: space-around;
   display: flex;
   list-style: none;
   background-color: black;
-  /*     display: block; */
 }
-.navDivHeader .ulNavDivHeader .liUlNavHeader {
+header .menu .navBar ul li {
   margin-right: 50px;
 }
-.navDivHeader .ulNavDivHeader .liUlNavHeader:hover {
-  background-image: linear-gradient(to right, #000000, #331d1f, #62342e, #8e5135, #b47536, #b47536, #b47536, #b47536, #8e5135, #62342e, #331d1f, #000000);
-}
-.navDivHeader .ulNavDivHeader .liUlNavHeader:active {
-  background-color: rgba(212, 175, 55, 0.8235294118);
-  color: rgba(0, 0, 0, 0.829);
-  border-radius: 3px;
-}
-.navDivHeader .ulNavDivHeader .liUlNavHeader .aLiUlNavHeader {
+header .menu .navBar ul li a {
   color: #D4AF37;
   text-decoration: none;
   font-family: "Young Serif", serif;
   font-size: 2rem;
+}
+header .menu .navBar ul li:hover {
+  background-image: linear-gradient(to right, #000000, #331d1f, #62342e, #8e5135, #b47536, #b47536, #b47536, #b47536, #8e5135, #62342e, #331d1f, #000000);
+}
+header .menu .navBar ul li:active {
+  background-color: rgba(212, 175, 55, 0.8235294118);
+  color: rgba(0, 0, 0, 0.829);
+  border-radius: 3px;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
 }
 
 /* Main */
@@ -243,27 +276,6 @@ main .videoAniversario {
 }
 
 /*Page Contacto*/
-/* .sectionFormulario{
-    background-color: black;
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-}
-.sectionFormulario h2{
-    text-align:start;
-}
-.formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: black;
-}
-form{
-    justify-content: center;
-    color: #D4AF37;
-    background-color: black;
-    font-size: 3rem;
-} */
 .sectionFormulario {
   margin-top: 15px;
   background-color: black;

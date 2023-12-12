@@ -1,0 +1,40 @@
+
+Hola Eze, espero estes bien!! 
+
+
+
+Vienes avanzando bastante!! 
+
+
+
+Te dejo mis recomendaciones. 
+
+
+
+Para la nav te recomiendo que en lugar de tirar los elementos hacia la derecha, los dejes que se ajusten. Visualmente queda un poco mejor ya que no se deja ver espacio vacio a la izquierda. Algo asi 
+
+
+
+
+
+También habría que agregarle un poco mas de espaciado entre el logo y el contenido siguiente, esta muy junto todo. 
+
+
+
+El h1 no es recomendable que sea una imagen, ya que esto para el SEO no es lo indicado, recuerda que los motores de búsqueda indexan por por la jerarquía de los títulos, en este caso al ser una imagen cualquier motor no sabría como interpretar ese titulo. 
+
+
+
+Tu sitio necesitaría también un footer, es esencial en una web. 
+
+
+
+Recuerda el codigo comentado no deberia estar en tu proyecto final. 
+
+
+
+Por ultimo, tanto para esta entrega como para la siguiente, es necesario que incluyas en scss variables, map,extend y mixin. Si bien creaste el archivo partial para las variables, esta vacio. 
+
+
+
+Exitos!! 

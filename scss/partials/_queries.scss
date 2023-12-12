@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     h1{
         display:flex ;
         flex-direction:column;
@@ -12,51 +12,47 @@
 }
 /* MENU MOBILE */
 
-.navDivHeader {
-    
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
+// Media query para estilos específicos en pantallas más pequeñas
+@media (max-width:768px) {
+  .content {
+    min-height: 70px;
+    .menu {
+      top:0;
+      padding: 20px;
+      label {
+        display: initial;
+    }
+    .navBar{
+      position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
         li {
-            margin: 0;
-            padding: 0;
-            
-            // Estilos generales para los elementos del menú
-        }
-
-        a {
-            text-decoration: none;
-            color: #fff;
-            
-            // Estilos generales para los enlaces del menú
-        }
-        
+        width: 100%;
     }
+    }    
+    #menu:checked ~ .navBar {
+      display: initial;
+  }
+  }
+}
+}
 
-    // Estilos para pantallas pequeñas (por ejemplo, dispositivos móviles)
-    @media (max-width: 768px) {
-        ul {
-            display: none;
-            flex-direction: column;
-            text-align: center;
-            #check_menu {
-                display: block; // Muestra el checkbox para la vista mobile
-            }
-    
-            .bx-menu {
-                display: block; // Muestra el ícono del menú para la vista mobile
-            }
-            li {
-                margin-bottom: 10px;
-                // Ajusta el espacio entre elementos del menú
-            }
+  
+/*     @media (max-width: 412px) {
+        .contenedorDeGrid {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-areas: "header " "main main" "main main" "main main " "footer ";
         }
-
-        // Estilos adicionales para el menú en pantallas pequeñas
-    }
-};
+        .header {
+          grid-area: header;
+        }
+        .main {
+          grid-area: main;
+        }
+        .footer {
+          grid-area: footer;
+        }
+      } */
