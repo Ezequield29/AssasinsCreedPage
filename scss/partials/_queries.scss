@@ -13,6 +13,63 @@
 /* MENU MOBILE */
 
 // Media query para estilos específicos en pantallas más pequeñas
+
+@media (max-width:914px) {
+  .content {
+    min-height: 30px;
+        .menu {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+      top:10px;
+      padding: 10px ;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      .logoTitulo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .imgLogo{
+          height: 70px;
+          width: 50px;
+          margin: 10px;
+        }
+        span{
+          font-size: 5rem;
+        }
+      }
+      
+      label {
+        display: initial;
+        
+    }
+    .container-fluid {
+      margin: auto;
+      padding-bottom: 10px;
+  }
+    .navBar{
+      position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        ul{
+          flex-direction: column;
+          justify-content: space-around;
+        }
+        li {
+        width: auto;
+        margin: 0%;
+        
+        
+    }
+    }   
+    #menu:checked ~ .navBar {
+      display: initial;
+  }
+  }
+}
+}
 @media (max-width:768px) {
   .content {
     min-height: 70px;
@@ -46,9 +103,13 @@
 @media (max-width:412px) {
   .content {
     min-height: 30px;
-    .menu {
-      top:0;
-      padding: 5px;
+        .menu {
+          display: flex;
+          flex-direction: column;
+      top:10px;
+      padding: 0 ;
+      padding-top: 20px;
+      padding-bottom: 10px;
       .logoTitulo{
         display: flex;
         flex-direction: column;
@@ -65,15 +126,23 @@
         display: initial;
         
     }
+    .container-fluid {
+      margin: auto;
+      padding-bottom: 10px;
+  }
     .navBar{
       position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         display: none;
-        
+        ul{
+          flex-direction: column;
+          justify-content: space-around;
+        }
         li {
         width: auto;
+        margin: 0%;
         
         
     }
@@ -85,7 +154,7 @@
 }
 }
   
-/*     @media (max-width: 412px) {
+    @media (max-width: 412px) {
         .contenedorDeGrid {
           display: grid;
           grid-template-columns: repeat(1, 1fr);
@@ -100,4 +169,4 @@
         .footer {
           grid-area: footer;
         }
-      } */
+      }
