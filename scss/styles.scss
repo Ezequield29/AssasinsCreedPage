@@ -96,7 +96,7 @@ header {
 }
     /* Main */
 main{
-    margin-top: -1%;
+    background-color: black;
     img {
         height: 100%;
         width: 100%;
@@ -105,12 +105,10 @@ main{
     .descripcion {
         padding: 30px;
         background-color: black;
-        margin-top: -5px;
     }
     .historia{
         padding: 30px;
         background-color: black;
-        margin-top: -5px;
     }
     h2{
         font-size: 5rem;

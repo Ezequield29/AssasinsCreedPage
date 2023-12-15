@@ -20,29 +20,24 @@
 <body>
     <div class="contenedorDeGrid">
         <!--HEADER-->
-        <header class="header">
-            <div class="content">
-                <div class="menu container-fluid">
-                    <div class="logoTitulo">
-                        <a href="./index.html"> <img src="../images/logoAssasins.png" alt="Assasins Creed" class="imgLogo"></a>
-                    <span>    Assasin$ Creed</span>
-                    </div>
-    <!-- Menu Mobile-->
-                    <input type="checkbox" id="menu"/>
-                    <label for="menu">
-                        <img src="./images/menu.png" class="menu-icono" alt="">
-                    </label>
-                    <nav class="navBar"> 
-                        <ul>
-                            <li><a href="../pages/historia.html">Historia</a></li>
-                            <li><a href="../pages/personajesEmblematicos.html">Personajes Emblematicos</a></li>
-                            <li><a href="../pages/jugabilidadMecanicas.html">Jugabilidad y Mecanicas</a></li>
-                            <li><a href="../pages/galeriaImagenes.html">Galeria de Imagenes</a></li>
-                            <li><a href="../pages/contacto.html">Contacto</a></li>  
-                        </ul>
-                    </nav>
+        <header class="header" id="header">
+            <div class="divHeader">
+                <div class="containerLogo">
+                    <a href="./index.html"> <img src="../images/logoAssasins.png" alt="Assasins Creed" class="imgLogo"></a>
+                    <span>    Assasin$ Creed</span>    
                 </div>
-            </div> 
+            </div>
+            <div >
+                <nav class="navDivHeader">
+                    <ul class="ulNavDivHeader">
+                        <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="../pages/historia.html">Historia</a></li>
+                        <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="../pages/personajesEmblematicos.html">Personajes Emblematicos</a></li>
+                        <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="../pages/jugabilidadMecanicas.html">Jugabilidad y Mecanicas</a></li>
+                        <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="../pages/galeriaImagenes.html">Galeria de Imagenes</a></li>
+                        <li class="liUlNavHeader"><a class="aLiUlNavHeader"href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 <!--Main-->
         <main class="main" id="main">
@@ -89,7 +84,7 @@
                         <div>Tu Consulta</div>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
                         <input type="radio" name="recibirInfo" value="recibirInfo">
-                        <div>Quiero recibir información de nuestros productos y promociones</div>
+                        <div>Quiero recibir información.</div>
                         <input type="submit" value="Enviar">
                     </form>
                 </div>
