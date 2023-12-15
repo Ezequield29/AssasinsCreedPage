@@ -81,14 +81,33 @@
 }
 @media (max-width: 768px) {
   .content {
-    min-height: 70px;
+    min-height: 30px;
   }
   .content .menu {
-    top: 0;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /*  top:10px;
+     padding: 0 ;
+     padding-top: 20px;
+     padding-bottom: 10px; */
+  }
+  .content .menu .logoTitulo {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .menu .logoTitulo .imgLogo {
+    height: 70px;
+    width: 50px;
+  }
+  .content .menu .logoTitulo span {
+    font-size: 5rem;
   }
   .content .menu label {
     display: initial;
+  }
+  .content .menu .container-fluid {
+    margin: auto;
+    padding-bottom: 10px;
   }
   .content .menu .navBar {
     position: absolute;
@@ -97,8 +116,13 @@
     right: 0;
     display: none;
   }
+  .content .menu .navBar ul {
+    flex-direction: column;
+    justify-content: space-around;
+  }
   .content .menu .navBar li {
-    width: 100%;
+    width: auto;
+    margin: 0%;
   }
   .content .menu #menu:checked ~ .navBar {
     display: initial;
