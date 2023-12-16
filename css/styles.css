@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* sass --watch scss:css */
 /*Paramteros Globales*/
 /*desktop*/
@@ -14,185 +15,6 @@
   box-sizing: border-box;
 }
 
-/* @media (min-width: 768px) {
-    h1{
-        display:flex ;
-        flex-direction:column;
-        padding-top: 2%;
-        font-family: 'Assassin', serif ;
-        font-size: 4rem;
-        text-align:center;
-        background-color: rgb(0, 0, 0);
-        color: blanchedalmond;
-    } 
-} */
-/* MENU MOBILE */
-@media (max-width: 914px) {
-  .content {
-    min-height: 30px;
-  }
-  .content .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    top: 10px;
-    padding: 10px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-  .content .menu .logoTitulo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .content .menu .logoTitulo .imgLogo {
-    height: 70px;
-    width: 50px;
-    margin: 10px;
-  }
-  .content .menu .logoTitulo span {
-    font-size: 5rem;
-  }
-  .content .menu label {
-    display: initial;
-  }
-  .content .menu .container-fluid {
-    margin: auto;
-    padding-bottom: 10px;
-  }
-  .content .menu .navBar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    display: none;
-  }
-  .content .menu .navBar ul {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .content .menu .navBar li {
-    width: auto;
-    margin: 0%;
-  }
-  .content .menu #menu:checked ~ .navBar {
-    display: initial;
-  }
-}
-@media (max-width: 768px) {
-  .content {
-    min-height: 30px;
-  }
-  .content .menu {
-    display: flex;
-    flex-direction: column;
-    /*  top:10px;
-     padding: 0 ;
-     padding-top: 20px;
-     padding-bottom: 10px; */
-  }
-  .content .menu .logoTitulo {
-    display: flex;
-    flex-direction: column;
-  }
-  .content .menu .logoTitulo .imgLogo {
-    height: 70px;
-    width: 50px;
-  }
-  .content .menu .logoTitulo span {
-    font-size: 5rem;
-  }
-  .content .menu label {
-    display: initial;
-  }
-  .content .menu .container-fluid {
-    margin: auto;
-    padding-bottom: 10px;
-  }
-  .content .menu .navBar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    display: none;
-  }
-  .content .menu .navBar ul {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .content .menu .navBar li {
-    width: auto;
-    margin: 0%;
-  }
-  .content .menu #menu:checked ~ .navBar {
-    display: initial;
-  }
-}
-@media (max-width: 412px) {
-  .content {
-    min-height: 30px;
-  }
-  .content .menu {
-    display: flex;
-    flex-direction: column;
-    top: 10px;
-    padding: 0;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-  .content .menu .logoTitulo {
-    display: flex;
-    flex-direction: column;
-  }
-  .content .menu .logoTitulo .imgLogo {
-    height: 70px;
-    width: 50px;
-  }
-  .content .menu .logoTitulo span {
-    font-size: 5rem;
-  }
-  .content .menu label {
-    display: initial;
-  }
-  .content .menu .container-fluid {
-    margin: auto;
-    padding-bottom: 10px;
-  }
-  .content .menu .navBar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    display: none;
-  }
-  .content .menu .navBar ul {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .content .menu .navBar li {
-    width: auto;
-    margin: 0%;
-  }
-  .content .menu #menu:checked ~ .navBar {
-    display: initial;
-  }
-}
-@media (max-width: 412px) {
-  .contenedorDeGrid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "header " "main main" "main main" "main main " "footer ";
-  }
-  .header {
-    grid-area: header;
-  }
-  .main {
-    grid-area: main;
-  }
-  .footer {
-    grid-area: footer;
-  }
-}
 .contenedorDeGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -237,6 +59,7 @@ header {
 }
 header .content {
   height: 100%;
+  z-index: 1000;
 }
 header .container-fluid {
   margin: auto;
@@ -246,10 +69,6 @@ header .container-fluid .imgLogo {
   background-color: black;
 }
 header .container-fluid span {
-  /* font-size: 6rem;
-  text-align: center;
-  background-color: black;
-  margin-bottom: -1%; */
   font-size: 6rem;
   font-weight: 600;
   color: blanchedalmond;
@@ -352,17 +171,36 @@ main .videoAniversario {
   width: 100%;
 }
 
+.footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
 .footer .arriba {
   font-size: 3rem;
-  background-color: black;
   color: #D4AF37;
 }
-.footer .aDiv {
+.footer .arriba .aDiv {
   color: #D4AF37;
-  list-style: none;
   text-decoration: none;
+  transition: color 0.3s ease; /* Transición suave del color */
+}
+.footer .arriba .aDiv:hover {
+  color: #B47536; /* Cambia el color al pasar el mouse */
 }
 
+/* .footer{
+    .arriba{
+        font-size: 3rem;
+        background-color: black;
+        color: #D4AF37;
+    }
+    .aDiv{
+        color: #D4AF37;
+        list-style: none;
+        text-decoration: none;
+    }
+} */
 /*Page Historia*/
 .divHistoriaOdyssey {
   padding: 30px;
@@ -385,17 +223,31 @@ main .videoAniversario {
 }
 
 /*Page Galeria de Imagenes*/
+.descripcion {
+  padding: 20px;
+  background-color: black;
+  color: #D4AF37;
+  text-align: center;
+}
+
+.carouselExample {
+  padding-top: 20px;
+}
+.carouselExample .carousel-inner {
+  width: 100%;
+  overflow: hidden;
+}
+
 .galeria {
   padding: 30px;
   background-color: black;
-  display: flex;
-  display: block;
 }
 
 .imgGaleria {
   margin-top: 30px;
   width: 100%;
   justify-content: center;
+  border-radius: 5px;
 }
 
 /*Page Contacto*/
@@ -449,5 +301,238 @@ main .videoAniversario {
 }
 
 /*Media quieres*/
+/* @media (min-width: 768px) {
+    h1{
+        display:flex ;
+        flex-direction:column;
+        padding-top: 2%;
+        font-family: 'Assassin', serif ;
+        font-size: 4rem;
+        text-align:center;
+        background-color: rgb(0, 0, 0);
+        color: blanchedalmond;
+    } 
+} */
+/* MENU MOBILE */
+@media (max-width: 914px) {
+  .content {
+    min-height: 80px;
+  }
+  .content .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .content .menu .logoTitulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .content .menu .logoTitulo .imgLogo {
+    height: 70px;
+    width: 50px;
+    margin: 10px;
+  }
+  .content .menu .logoTitulo span {
+    font-size: 5rem;
+  }
+  .content .menu label {
+    display: initial;
+  }
+  .content .menu .container-fluid {
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  .content .menu .navBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+  .content .menu .navBar ul {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .content .menu .navBar li {
+    width: auto;
+    margin: 0%;
+  }
+  .content .menu #menu:checked ~ .navBar {
+    display: initial;
+  }
+  .aniversario15 {
+    width: 20px;
+    height: 412px;
+    justify-content: center;
+  }
+  .videoAniversario {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    min-height: 30px;
+  }
+  .content .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .menu .logoTitulo {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .menu .logoTitulo .imgLogo {
+    height: 70px;
+    width: 50px;
+  }
+  .content .menu .logoTitulo span {
+    font-size: 5rem;
+  }
+  .content .menu label {
+    display: initial;
+  }
+  .content .menu .container-fluid {
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  .content .menu .navBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+  }
+  .content .menu .navBar ul {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .content .menu .navBar li {
+    width: auto;
+    margin: 0%;
+  }
+  .content .menu #menu:checked ~ .navBar {
+    display: initial;
+  }
+  /* index */
+  #main section .descripcion h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: #D4AF37;
+    background-color: black;
+  }
+  #main .aniversario15 {
+    width: 100%;
+    height: 412px;
+    justify-content: center;
+  }
+  #main .aniversario15 .videoAniversario {
+    height: 100%;
+    width: 100%;
+  }
+  /* Historia */
+  main section .historia h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: #D4AF37;
+    background-color: black;
+  }
+}
+@media (max-width: 412px) {
+  .content {
+    min-height: 30px;
+  }
+  .content .menu {
+    display: flex;
+    flex-direction: column;
+    top: 10px;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .content .menu .logoTitulo {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .menu .logoTitulo .imgLogo {
+    height: 70px;
+    width: 50px;
+  }
+  .content .menu .logoTitulo span {
+    font-size: 5rem;
+  }
+  .content .menu label {
+    display: initial;
+  }
+  .content .menu .container-fluid {
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  .content .menu .navBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+  .content .menu .navBar ul {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .content .menu .navBar li {
+    width: auto;
+    margin: 0%;
+  }
+  .content .menu #menu:checked ~ .navBar {
+    display: initial;
+  }
+  /* index */
+  .aniversario15 {
+    width: 20px;
+    height: 412px;
+    justify-content: center;
+  }
+  .videoAniversario {
+    height: 20px;
+    width: 20px;
+  }
+  /* Historia */
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #D4AF37;
+    background-color: black;
+  }
+}
+/* Formulario */
+#main .sectionFormulario h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #D4AF37;
+  background-color: black;
+}
+
+@media (max-width: 412px) {
+  .contenedorDeGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "header " "main main" "main main" "main main " "footer ";
+  }
+  .header {
+    grid-area: header;
+  }
+  .main {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,7 +3,7 @@
 /*desktop*/
 @import"./partials/variables";
 @import"./partials/reset";
-@import"./partials/queries";
+
 @import"./partials/grids";
 /*HTML*/
 /* Header */
@@ -12,10 +12,9 @@ header {
     top: 0%;
     width: 100%;
     height: 100%;
-    
     .content{
         height: 100%;
-        
+        z-index: 1000;
     }
     .container-fluid{
         margin: auto;
@@ -25,10 +24,6 @@ header {
             background-color: black;
         }
         span{
-            /* font-size: 6rem;
-            text-align: center;
-            background-color: black;
-            margin-bottom: -1%; */
             font-size: 6rem;
             font-weight: 600;
             color: blanchedalmond;
@@ -43,13 +38,16 @@ header {
         flex-direction: column;
         align-items: center;
         background-color: black;
+       
         .logoTitulo{
             align-items: center;
 
         }
         .navBar{
+
             height: 100%;
             width: 100%;
+           
             justify-content: space-around;
             ul{
                 margin: 0;
@@ -133,7 +131,27 @@ main{
     
     }
 }
-.footer{
+.footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    
+    .arriba {
+        font-size: 3rem;
+        color: #D4AF37;
+        
+        .aDiv {
+            color: #D4AF37;
+            text-decoration: none;
+            transition: color 0.3s ease; /* Transición suave del color */
+            
+            &:hover {
+                color: #B47536; /* Cambia el color al pasar el mouse */
+            }
+        }
+    }
+}
+/* .footer{
     .arriba{
         font-size: 3rem;
         background-color: black;
@@ -144,7 +162,7 @@ main{
         list-style: none;
         text-decoration: none;
     }
-}
+} */
 
 /*Page Historia*/
 .divHistoriaOdyssey{
@@ -165,16 +183,28 @@ main{
     margin-top: -5px;
 }
 /*Page Galeria de Imagenes*/
+.descripcion {
+    padding: 20px;
+    background-color: black;
+    color: #D4AF37;
+    text-align: center;
+}
+.carouselExample{
+    padding-top: 20px;
+    .carousel-inner {
+        width: 100%;
+        overflow: hidden;
+        }
+}
 .galeria{
     padding: 30px;
     background-color: black;
-    display: flex;
-    display:block;
 }
 .imgGaleria{
     margin-top: 30px;
     width: 100%;
     justify-content: center;
+    border-radius: 5px;
 }
 /*Page Contacto*/
 .sectionFormulario {
@@ -229,3 +259,4 @@ main{
     }
 }
 /*Media quieres*/
+@import"./partials/queries";

@@ -16,7 +16,7 @@
 
 @media (max-width:914px) {
   .content {
-    min-height: 30px;
+    min-height: 80px;
         .menu {
           display: flex;
           flex-direction: row;
@@ -69,6 +69,16 @@
   }
   }
 }
+.aniversario15{
+  width:20px;
+  height: 412px;
+  justify-content: center;
+}
+.videoAniversario{
+  height: 20px;
+  width: 20px;
+
+}
 }
 @media (max-width:768px) {
   .content {
@@ -76,10 +86,10 @@
         .menu {
           display: flex;
           flex-direction: column;
-          top:10px;
+         /*  top:10px;
           padding: 0 ;
           padding-top: 20px;
-          padding-bottom: 10px;
+          padding-bottom: 10px; */
       .logoTitulo{
         display: flex;
         flex-direction: column;
@@ -105,6 +115,7 @@
         top: 100%;
         left: 0;
         right: 0;
+        z-index: 1000;
         display: none;
         ul{
           flex-direction: column;
@@ -122,6 +133,45 @@
   }
   }
 }
+/* index */
+#main{
+  section{
+    .descripcion{
+      h2{
+        font-size: 3rem;
+          text-align: center;
+          color: #D4AF37;
+          background-color: black;
+      }
+    }
+  }
+  .aniversario15{
+    width:100%;
+    height: 412px;
+    justify-content: center;
+    .videoAniversario{
+      height: 100%;
+      width: 100%;
+    
+    }
+  }
+}
+
+
+/* Historia */
+main{
+  section{
+    .historia{
+      h2{
+        font-size: 3rem;
+          text-align: center;
+          color: #D4AF37;
+          background-color: black;
+      }
+    }
+  }
+}
+
 }
 @media (max-width:412px) {
   .content {
@@ -175,6 +225,35 @@
   }
   }
 }
+/* index */
+.aniversario15{
+  width:20px;
+  height: 412px;
+  justify-content: center;
+}
+.videoAniversario{
+  height: 20px;
+  width: 20px;
+
+}
+/* Historia */
+h2{
+  font-size: 2rem;
+    text-align: center;
+    color: #D4AF37;
+    background-color: black;
+}
+}
+/* Formulario */
+#main{
+  .sectionFormulario{
+    h2{
+      font-size: 2rem;
+      text-align: center;
+      color: #D4AF37;
+      background-color: black;
+    }
+  }
 }
   
     @media (max-width: 412px) {
