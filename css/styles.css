@@ -59,7 +59,7 @@ header {
 }
 header .content {
   height: 100%;
-  z-index: 1000;
+  z-index: 2;
 }
 header .container-fluid {
   margin: auto;
@@ -85,6 +85,26 @@ header .menu {
 }
 header .menu .logoTitulo {
   align-items: center;
+}
+header .menu .breadcrumbs {
+  margin: 10px 0;
+  font-size: 16px;
+}
+header .menu .breadcrumbs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .menu .breadcrumbs ul li {
+  display: inline;
+  margin-right: 10px;
+}
+header .menu .breadcrumbs ul li a {
+  text-decoration: none;
+  color: #555;
+}
+header .menu .breadcrumbs ul li a:hover {
+  color: #000;
 }
 header .menu .navBar {
   height: 100%;
@@ -149,7 +169,7 @@ main .historia {
   padding: 30px;
   background-color: black;
 }
-main h2 {
+main h1 {
   font-size: 5rem;
   text-align: center;
   color: #D4AF37;
@@ -223,6 +243,10 @@ main .videoAniversario {
 }
 
 /*Page Galeria de Imagenes*/
+.main .carousel {
+  z-index: 1;
+}
+
 .descripcion {
   padding: 20px;
   background-color: black;

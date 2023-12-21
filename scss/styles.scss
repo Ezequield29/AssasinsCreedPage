@@ -14,7 +14,7 @@ header {
     height: 100%;
     .content{
         height: 100%;
-        z-index: 1000;
+        z-index: 2;
     }
     .container-fluid{
         margin: auto;
@@ -42,6 +42,30 @@ header {
         .logoTitulo{
             align-items: center;
 
+        }
+        .breadcrumbs {
+            margin: 10px 0;
+            font-size: 16px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: inline;
+                    margin-right: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: #555;
+                    }
+
+                    a:hover {
+                        color: #000;
+                    }
+                }
+            }
         }
         .navBar{
 
@@ -108,7 +132,7 @@ main{
         padding: 30px;
         background-color: black;
     }
-    h2{
+    h1{
         font-size: 5rem;
         text-align: center;
         color: #D4AF37;
@@ -183,6 +207,12 @@ main{
     margin-top: -5px;
 }
 /*Page Galeria de Imagenes*/
+.main{
+    .carousel{
+        z-index: 1;
+    }
+
+}
 .descripcion {
     padding: 20px;
     background-color: black;
